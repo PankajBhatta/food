@@ -1,19 +1,3 @@
-// import { TestBed } from '@angular/core/testing';
-
-// import { FoodService } from './food.service';
-
-// describe('FoodService', () => {
-//   let service: FoodService;
-
-//   beforeEach(() => {
-//     TestBed.configureTestingModule({});
-//     service = TestBed.inject(FoodService);
-//   });
-
-//   it('should be created', () => {
-//     expect(service).toBeTruthy();
-//   });
-// });
 
 
 import { Injectable } from "@angular/core";
@@ -25,6 +9,9 @@ import { Food } from "../shared/models/food";
 })
 
 export class FoodService{
+  getAllTags(): import("src/app/shared/models/tags").Tag[] {
+    throw new Error('Method not implemented.');
+  }
   constructor(){}
     getAll():Food[]{
       return sample_foods;

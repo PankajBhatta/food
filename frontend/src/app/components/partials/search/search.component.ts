@@ -10,10 +10,11 @@ import { Component, OnInit } from '@angular/core';
 
 export class SearchComponent implements OnInit{
   SearchTerm='';
-  constructor(activatedRoute:ActivatedRoute,private router:Router){
-    activatedRoute.params.subscribe((params)=>{
-      if(params.searchTerm) this.SearchTerm =params.searchTerm;
-    });
+  router: any;
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      const query = params['query'];
+});
   }
   ngOnInit(): void {
   }
