@@ -1,5 +1,5 @@
 import { Tag } from 'src/app/shared/models/tags';
-import { FoodService } from './../../../services/food.service.spec';
+import { FoodService } from 'src/app/services/food.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

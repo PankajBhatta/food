@@ -1,4 +1,3 @@
-import { Tag } from './../../../shared/models/tags';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FoodService } from 'src/app/services/food.service';
@@ -15,13 +14,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private foodService: FoodService, activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
-      if (params.searchTerm) {
+      if (params.searchTerm)
         this.foods = this.foodService.getAllFoodsBySearchTerm(params.searchTerm);
-      } else if (params.tag) {
+       else if (params.tag)
          this.foods = this.foodService.getAllFoodsByTag(params.tag);
-      } else {
+       else
         this.foods = this.foodService.getAll();
-      }
+
     });
   }
 
